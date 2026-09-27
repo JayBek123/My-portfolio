@@ -2,10 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import profileImage from './assets/profile.jpg'
 
-const name = "Welcome to John's Portfolio"
+const name = "John Bekoe"
 const role = 'Computer Science & Engineering Student'
 const summary =
-  'I am a driven student developer focused on software engineering, artificial intelligence, and creating practical digital solutions that solve real-world problems.'
+  'I build practical digital products with a growing focus on software engineering, artificial intelligence, and systems that make everyday work simpler.'
 
 const education = [
   { label: 'Degree', value: 'BSc. Computer Science and Engineering' },
@@ -13,7 +13,7 @@ const education = [
   { label: 'Level', value: 'Level 300' },
 ]
 
-const skills = ['Python', 'C++', 'Web Development', 'Databases', 'Mobile App Development', 'AI']
+const skills = ['Python', 'C++', 'Web Development', 'Databases', 'Mobile Development', 'AI']
 
 const projects = [
   {
@@ -47,8 +47,9 @@ function App() {
       return (
         <main className="page-shell">
           <section className="module page-header">
-            <p className="section-tag">Projects</p>
+            <p className="section-tag">Portfolio / 01</p>
             <h3>Selected work</h3>
+            <p className="page-lede">A closer look at the problems I have explored and the systems I have built.</p>
           </section>
 
           <section className="module project-grid compact-grid">
@@ -123,7 +124,7 @@ function App() {
       <main className="cv-shell">
         <section className="hero module">
           <div className="hero-copy">
-            <p className="eyebrow">Portfolio</p>
+            <p className="eyebrow">Available for opportunities · Accra, Ghana</p>
             <h1>{name}</h1>
             <h2>{role}</h2>
             <p className="summary">{summary}</p>
@@ -133,8 +134,14 @@ function App() {
                 Email me
               </a>
               <button type="button" className="secondary-btn" onClick={() => setActivePage('projects')}>
-                View projects
+                See my work <span aria-hidden="true">↗</span>
               </button>
+            </div>
+
+            <div className="proof-row" aria-label="Portfolio highlights">
+              <div><strong>03</strong><span>Featured projects</span></div>
+              <div><strong>06</strong><span>Core skills</span></div>
+              <div><strong>300</strong><span>Current level</span></div>
             </div>
           </div>
 
@@ -142,14 +149,17 @@ function App() {
             <div className="avatar-wrap">
               <img src={profileImage} alt={name} className="avatar-photo" />
             </div>
-            <p className="label">Student developer</p>
-            <h3>Building practical solutions with purpose.</h3>
+            <p className="label">A little more about me</p>
+            <h3>Curious, collaborative, and serious about becoming a strong software engineer.</h3>
+            <button type="button" className="text-btn" onClick={() => setActivePage('resume')}>
+              View profile <span aria-hidden="true">→</span>
+            </button>
           </aside>
         </section>
 
         <div className="two-column">
           <section className="module info-panel">
-            <p className="section-tag">Profile</p>
+            <p className="section-tag">01 / About</p>
             <p>
               I am a motivated Computer Science and Engineering student with a strong interest in
               software development, artificial intelligence, and practical technology solutions. I
@@ -159,7 +169,7 @@ function App() {
           </section>
 
           <section className="module education-panel">
-            <p className="section-tag">Education</p>
+            <p className="section-tag">02 / Education</p>
             <div className="detail-list">
               {education.map((item) => (
                 <div key={item.label} className="detail-row">
@@ -172,7 +182,7 @@ function App() {
         </div>
 
         <section className="module skill-panel">
-          <p className="section-tag">Skills</p>
+          <p className="section-tag">03 / Skills</p>
           <div className="skill-list" aria-label="Skills">
             {skills.map((skill) => (
               <span key={skill} className="skill-item">
@@ -183,7 +193,15 @@ function App() {
         </section>
 
         <section className="module project-section">
-          <p className="section-tag">Projects</p>
+          <div className="section-heading">
+            <div>
+              <p className="section-tag">04 / Projects</p>
+              <h3>Work that shows how I think</h3>
+            </div>
+            <button type="button" className="text-btn" onClick={() => setActivePage('projects')}>
+              View all projects <span aria-hidden="true">↗</span>
+            </button>
+          </div>
 
           <div className="projects">
             {projects.map((project) => (
