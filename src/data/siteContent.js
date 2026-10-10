@@ -45,7 +45,7 @@ export const siteContent = {
       'I’m a Computer Science & Engineering student learning by building useful tools for queues, schedules, and the systems people rely on every day.',
   },
   heroStats: [
-    { value: '03', label: 'Selected projects' },
+    { value: '02', label: 'Selected projects' },
     { value: '06', label: 'Areas of focus' },
     { value: '300', label: 'Current level' },
   ],
@@ -79,16 +79,6 @@ export const siteContent = {
       outcome:
         'The goal is to make class planning easier to follow, easier to update, and more useful for students balancing coursework, study time, and personal responsibilities.',
       highlights: ['Course planning', 'Study routine support', 'Schedule clarity'],
-    },
-    {
-      title: 'Practical Tech Development',
-      description:
-        'An ongoing focus on building useful software tools for everyday challenges and the people who face them.',
-      detail:
-        'This area of work reflects a broader approach to learning through building. I focus on creating software that solves small but meaningful problems and helps real people navigate everyday tasks more smoothly.',
-      outcome:
-        'The emphasis is on simple, effective digital tools that improve clarity, workflow, and user experience in everyday life.',
-      highlights: ['Problem solving', 'User-focused design', 'Iterative learning'],
     },
   ],
   skills: ['Python', 'C++', 'Web development', 'Databases', 'Mobile development', 'AI'],

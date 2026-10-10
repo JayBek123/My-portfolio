@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import ProjectArtwork from '../components/ProjectArtwork'
 import { siteContent } from '../data/siteContent'
 
 function ProjectDetailPage() {
@@ -6,6 +7,7 @@ function ProjectDetailPage() {
   const project = siteContent.projects.find(
     (item) => item.title.toLowerCase().replace(/\s+/g, '-') === projectName,
   )
+  const projectIndex = siteContent.projects.indexOf(project) + 1
 
   if (!project) {
     return (
@@ -35,20 +37,21 @@ function ProjectDetailPage() {
           </div>
         </div>
 
-        <div className="project-list">
-          <article className="project-row" key={project.title}>
-            <span className="project-number">01</span>
-            <h3>{project.title}</h3>
-            <p>{project.detail}</p>
-            <span className="project-arrow" aria-hidden="true">↗</span>
-          </article>
+        <div className="project-case-study">
+          <ProjectArtwork index={projectIndex} title={project.title} />
+          <div className="project-case-copy">
+            <div>
+              <p className="project-card-label">Project overview</p>
+              <p>{project.detail}</p>
+            </div>
+          </div>
         </div>
 
         <div className="about-band" style={{ marginTop: '2rem' }}>
           <div className="about-inner">
-            <p className="section-index">02 <span>/</span> Outcome</p>
+            <p className="section-index">02 <span>/</span> Intended outcome</p>
             <div className="about-content">
-              <h2>Why it matters.</h2>
+              <h2>What it aims to improve.</h2>
               <p>{project.outcome}</p>
               <div className="skills-block">
                 <p className="skills-label">Project focus</p>

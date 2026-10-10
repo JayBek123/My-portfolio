@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ProjectArtwork from '../ProjectArtwork'
 
 export function WorkSection({ projects }) {
   return (
@@ -10,18 +11,24 @@ export function WorkSection({ projects }) {
           <p>Small snapshots of what I like to build: practical, people-first software.</p>
         </div>
       </div>
-      <div className="project-list">
+      <div className="project-gallery">
         {projects.map((project, index) => {
           const projectPath = project.title.toLowerCase().replace(/\s+/g, '-')
 
           return (
-            <article className="project-row" key={project.title}>
-              <span className="project-number">0{index + 1}</span>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <Link to={`/project/${projectPath}`} className="primary-action">
-                View project <span aria-hidden="true">↗</span>
-              </Link>
+            <article className="project-card" key={project.title}>
+              <ProjectArtwork index={index + 1} title={project.title} />
+              <div className="project-card-copy">
+                <span className="project-card-label">Selected work <span aria-hidden="true">/</span> 0{index + 1}</span>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <ul className="project-tags" aria-label="Project focus">
+                  {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                </ul>
+                <Link to={`/project/${projectPath}`} className="project-card-link">
+                  View project <span aria-hidden="true">↗</span>
+                </Link>
+              </div>
             </article>
           )
         })}
