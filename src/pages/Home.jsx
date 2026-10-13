@@ -1,4 +1,4 @@
-import profileImage from '../assets/profile.jpg'
+import profileImage from '../assets/profile-replacement.png'
 import { Link } from 'react-router-dom'
 import HeroSection from '../components/sections/HeroSection'
 import { siteContent } from '../data/siteContent'
