@@ -47,7 +47,7 @@ function ProjectDetailPage() {
           </div>
         </div>
 
-        <div className="about-band" style={{ marginTop: '2rem' }}>
+        <div className="about-band project-outcome-band">
           <div className="about-inner">
             <p className="section-index">02 <span>/</span> Intended outcome</p>
             <div className="about-content">
@@ -65,7 +65,7 @@ function ProjectDetailPage() {
           </div>
         </div>
 
-        <Link to="/work" className="primary-action" style={{ marginTop: '2rem' }}>Back to all projects <span aria-hidden="true">↗</span></Link>
+        <Link to="/work" className="primary-action project-back-link">Back to all projects <span aria-hidden="true">↗</span></Link>
       </section>
     </main>
   )

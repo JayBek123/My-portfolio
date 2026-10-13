@@ -53,7 +53,7 @@ export const siteContent = {
     label: 'Curious by nature.',
     labelSecondary: 'Practical by design.',
     description:
-      'I’m a Level 300 Computer Science and Engineering student at the University of Science and Technology. I enjoy learning through collaboration and turning everyday challenges into clear, useful digital tools.',
+      'I’m a Level 300 Computer Science and Engineering student at the University of Mines and Technology, Tarkwa. I enjoy learning through collaboration and turning everyday challenges into clear, useful digital tools.',
   },
   socialLinks: [
     { label: 'GitHub', url: 'https://github.com/JayBek123' },
@@ -63,28 +63,38 @@ export const siteContent = {
     {
       title: 'SmartQueue System',
       description:
-        'A virtual queue platform designed to improve service flow and reduce long waits in academic and administrative settings.',
+        'A virtual queue concept for campus service points, designed to make queue progress easier to see and service visits easier to organize.',
       detail:
-        'SmartQueue System was designed to make service access clearer and more efficient in busy academic settings. The idea was to reduce friction for students, staff, and administrators by creating a digital queue flow that feels organized and easy to understand.',
+        'SmartQueue System explores how students can join a campus service queue and understand their place without needing to wait in a crowded physical line. The concept focuses on making the steps clear for both visitors and the staff managing service.',
       outcome:
-        'The project focuses on practical service design: faster wait visibility, improved communication, and a more structured experience for everyday campus operations.',
-      highlights: ['Queue visibility', 'Service flow mapping', 'Operational efficiency'],
+        'The intended outcome is clearer visibility into queue progress, fewer unnecessary waits near service desks, and a more predictable process for campus offices. These are design goals, not measured results.',
+      highlights: ['Queue progress visibility', 'Campus service workflow', 'Wait-time experience'],
     },
     {
       title: 'Student Timetable System',
       description:
-        'A scheduling application that helps students organize classes and study routines with more clarity.',
+        'A student scheduling concept for bringing classes and study plans into one clearer weekly view.',
       detail:
-        'This project centers on helping students plan their academic week without unnecessary confusion. It turns fragmented scheduling into a more visual and manageable routine that supports better decision-making.',
+        'This project focuses on helping students plan an academic week in one place. A clear weekly schedule can make it easier to see class commitments, find time for study, and keep track of a changing routine.',
       outcome:
-        'The goal is to make class planning easier to follow, easier to update, and more useful for students balancing coursework, study time, and personal responsibilities.',
-      highlights: ['Course planning', 'Study routine support', 'Schedule clarity'],
+        'The intended outcome is a schedule students can scan and update easily, helping them balance classes, study sessions, and personal commitments. No usage or performance results are claimed.',
+      highlights: ['Weekly class planning', 'Study-time organization', 'Schedule clarity'],
     },
   ],
-  skills: ['Python', 'C++', 'Web development', 'Databases', 'Mobile development', 'AI'],
+  skills: [
+    'JavaScript',
+    'React',
+    'HTML/CSS',
+    'Java',
+    'C#',
+    'ASP.NET Core',
+    'MongoDB',
+    'SQL Server',
+    'Git/GitHub',
+  ],
   education: [
     { label: 'Degree', value: 'BSc. Computer Science and Engineering' },
-    { label: 'Institution', value: 'University of Science and Technology' },
+    { label: 'Institution', value: 'University of Mines and Technology, Tarkwa' },
     { label: 'Current level', value: 'Level 300' },
   ],
   contact: {

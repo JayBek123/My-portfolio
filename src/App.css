@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 0;
   margin: 0;
   background: radial-gradient(circle at top, rgba(216, 238, 114, 0.22), transparent 32%), var(--paper);
   color: var(--ink);
@@ -286,9 +286,16 @@ figure {
 .portrait-panel {
   position: absolute;
   z-index: 0;
-  inset: 0 0 0 auto;
-  width: 58%;
+  top: 50%;
+  right: 6%;
+  width: clamp(240px, 34%, 390px);
+  aspect-ratio: 1;
   overflow: hidden;
+  border: 6px solid rgba(216, 238, 114, 0.75);
+  border-radius: 50%;
+  background: var(--deep-green);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.24);
+  transform: translateY(-50%);
 }
 
 .portrait-panel img {
@@ -296,7 +303,7 @@ figure {
   height: 100%;
   object-fit: cover;
   object-position: center 24%;
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.18) 18%, #000 53%);
+  border-radius: inherit;
   transition: transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 400ms ease;
 }
 
@@ -616,6 +623,11 @@ figure {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.8;
+}
+
+.project-outcome-band,
+.project-back-link {
+  margin-top: 2rem;
 }
 
 .about-band {
@@ -957,17 +969,20 @@ figure {
 
   .hero-copy {
     width: 100%;
+    padding-bottom: 190px;
   }
 
   .portrait-panel {
-    inset: auto 0 0;
-    width: 100%;
-    height: 66%;
+    top: auto;
+    right: 24px;
+    bottom: 22px;
+    width: min(42vw, 168px);
+    transform: none;
+    border-width: 4px;
   }
 
   .portrait-panel img {
-    object-position: center 20%;
-    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.58) 28%, #000 68%);
+    object-position: center 24%;
   }
 
   .hero::after {
@@ -1140,8 +1155,8 @@ figure {
   }
 
   .site-nav {
-    gap: 5px;
-    font-size: 9px;
+    gap: 4px;
+    font-size: 10px;
   }
 
   .brand {

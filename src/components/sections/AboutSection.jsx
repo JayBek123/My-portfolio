@@ -16,7 +16,7 @@ export function AboutSection({ about, education, skills }) {
             ))}
           </div>
           <div className="skills-block">
-            <p className="skills-label">Areas I’m building in</p>
+            <p className="skills-label">Technologies & tools</p>
             <ul className="skill-list">
               {skills.map((skill) => <li key={skill}>{skill}</li>)}
             </ul>
